@@ -16,9 +16,10 @@ Template.postSubmit.events({
             if (result.postExists)
                 alert('This link has already been posted（该链接已经存在）');
 
-
+            Router.go('postPage', {_id: result._id});
         });
 
-        Router.go('postsList');
+        //查看 延迟补偿机制 而使用
+        //Router.go('postsList');
     }
 });
