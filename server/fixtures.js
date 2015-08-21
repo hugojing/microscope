@@ -19,7 +19,9 @@ if (Posts.find().count() === 0) {
         author: sacha.profile.name,
         url: 'http://mp.weixin.qq.com/s?__biz=MzAxNzQ3NTI2OQ==&mid=214083811&idx=1&sn=79da95f4e96db90d74adf687d6d50de5#rd',
         submitted: new Date(now - 7 * 3600 * 1000),
-        commentsCount: 2
+        commentsCount: 2,
+        upvoters: [],
+        votes: 0
     });
 
     Comments.insert({
@@ -44,7 +46,9 @@ if (Posts.find().count() === 0) {
         author: tom.profile.name,
         url: 'http://mp.weixin.qq.com/s?__biz=MzAxNzQ3NTI2OQ==&mid=220669979&idx=1&sn=648f151d88776497f23a8fc0c16d8cdc#rd',
         submitted: new Date(now - 10 * 3600 * 1000),
-        commentsCount: 0
+        commentsCount: 0,
+        upvoters: [],
+        votes: 0
     });
 
     Posts.insert({
@@ -53,7 +57,9 @@ if (Posts.find().count() === 0) {
         author: tom.profile.name,
         url: 'http://mp.weixin.qq.com/s?__biz=MzAxNzQ3NTI2OQ==&mid=214114114&idx=1&sn=ff80255ac100c3b4c53c0a12326ac7c2#rd',
         submitted: new Date(now - 12 * 3600 * 1000),
-        commentsCount: 0
+        commentsCount: 0,
+        upvoters: [],
+        votes: 0
     });
 
     for (var i = 0; i < 10; i++) {
@@ -63,7 +69,9 @@ if (Posts.find().count() === 0) {
             userId: sacha._id,
             url: 'http://google.com/?q=test-' + i,
             submitted: new Date(now - i * 3600 * 1000),
-            commentsCount: 0
+            commentsCount: 0,
+            upvoters: [],
+            votes: 0
         });
     };
 }
